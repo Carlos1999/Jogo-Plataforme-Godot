@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Tilesets/background.tres" type="TileSet" id=1]
 [ext_resource path="res://Tilesets/ground.tres" type="TileSet" id=2]
@@ -10,6 +10,10 @@
 [ext_resource path="res://scenes/bernacle.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Scripts/Fase2.gd" type="Script" id=9]
 [ext_resource path="res://scenes/flagFim.tscn" type="PackedScene" id=10]
+[ext_resource path="res://scenes/bee.tscn" type="PackedScene" id=11]
+[ext_resource path="res://scenes/vidas.tscn" type="PackedScene" id=12]
+[ext_resource path="res://scenes/button.tscn" type="PackedScene" id=13]
+[ext_resource path="res://scenes/button_checkpoint.tscn" type="PackedScene" id=14]
 
 [node name="Fase2" type="Node2D"]
 script = ExtResource( 9 )
@@ -46,6 +50,9 @@ limit_bottom = 1000
 
 [node name="icones" type="CanvasLayer" parent="Player"]
 
+[node name="vidas" parent="Player/icones" instance=ExtResource( 12 )]
+position = Vector2( 879.403, 30.1992 )
+
 [node name="pontuacao" type="Label" parent="Player/icones"]
 anchor_right = 0.427
 anchor_bottom = 0.669
@@ -60,14 +67,18 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="fim" type="Label" parent="Player/icones"]
-margin_left = 327.752
-margin_top = 256.384
-margin_right = 914.752
-margin_bottom = 766.384
+[node name="Tutorial" type="Label" parent="Player/icones"]
+anchor_right = 0.427
+anchor_bottom = 0.669
+margin_left = 337.979
+margin_top = 8.78564
+margin_right = 204.732
+margin_bottom = -257.614
 custom_fonts/font = ExtResource( 6 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "Fim de Jogo!"
+custom_colors/font_color = Color( 0.392157, 0.219608, 0.219608, 1 )
+text = "Para pegar alguns pontos
+é necessário pensar e treinar os dedos
+Nem tudo na vida vem fácil!"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -98,7 +109,7 @@ position = Vector2( 6793.8, 56.6348 )
 [node name="Enemies" type="Node" parent="."]
 
 [node name="bernacle" parent="Enemies" instance=ExtResource( 8 )]
-position = Vector2( 1436.57, 667.575 )
+position = Vector2( 1310.58, 667.575 )
 
 [node name="bernacle2" parent="Enemies" instance=ExtResource( 8 )]
 position = Vector2( 621.982, 271.595 )
@@ -115,9 +126,6 @@ position = Vector2( 3742.24, 531.811 )
 [node name="bernacle6" parent="Enemies" instance=ExtResource( 8 )]
 position = Vector2( 6156.97, 334.724 )
 
-[node name="bernacle7" parent="Enemies" instance=ExtResource( 8 )]
-position = Vector2( 5814.48, 337.102 )
-
 [node name="bernacle8" parent="Enemies" instance=ExtResource( 8 )]
 position = Vector2( 5364.96, 534.511 )
 
@@ -127,5 +135,28 @@ position = Vector2( 5174.69, 527.375 )
 [node name="bernacle10" parent="Enemies" instance=ExtResource( 8 )]
 position = Vector2( 4590.17, 208.668 )
 
+[node name="bee" parent="Enemies" instance=ExtResource( 11 )]
+position = Vector2( 1039.51, 231.625 )
+
+[node name="bee3" parent="Enemies" instance=ExtResource( 11 )]
+position = Vector2( 3599.67, 392.895 )
+
+[node name="bee4" parent="Enemies" instance=ExtResource( 11 )]
+position = Vector2( 4359.01, 55.2361 )
+
+[node name="bee5" parent="Enemies" instance=ExtResource( 11 )]
+position = Vector2( 5779.46, 302.181 )
+
+[node name="bee2" parent="Enemies" instance=ExtResource( 11 )]
+position = Vector2( 2586.7, 171.149 )
+
 [node name="flagFim" parent="." instance=ExtResource( 10 )]
 position = Vector2( 7144.88, 529.258 )
+
+[node name="button_checkpoint" parent="flagFim" instance=ExtResource( 13 )]
+position = Vector2( -6706.29, 141.664 )
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="button" parent="." instance=ExtResource( 14 )]
+position = Vector2( 4171.9, 222.416 )

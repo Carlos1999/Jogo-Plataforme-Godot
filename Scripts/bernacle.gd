@@ -5,7 +5,7 @@ extends Area2D
 # var a = 2
 # var b = "text"
 
-
+var local_inicial = transform.x
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	$AnimatedSprite.play("move")
@@ -13,8 +13,7 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+
 
 
 func _on_bernacle_body_entered(body):

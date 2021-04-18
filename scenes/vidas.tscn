@@ -1,0 +1,38 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://platformer-pack-redux-360-assets/PNG/HUD/hudHeart_empty.png" type="Texture" id=1]
+[ext_resource path="res://scenes/vidas.gd" type="Script" id=2]
+[ext_resource path="res://platformer-pack-redux-360-assets/PNG/HUD/hudHeart_full.png" type="Texture" id=3]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 1 ) ],
+"loop": false,
+"name": "desativado",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 3 ) ],
+"loop": false,
+"name": "ativado",
+"speed": 5.0
+} ]
+
+[node name="vidas" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="coracao_1" type="AnimatedSprite" parent="."]
+scale = Vector2( 0.5, 0.5 )
+frames = SubResource( 1 )
+animation = "ativado"
+
+[node name="coracao_2" type="AnimatedSprite" parent="."]
+position = Vector2( 50, 0 )
+scale = Vector2( 0.5, 0.5 )
+frames = SubResource( 1 )
+animation = "ativado"
+
+[node name="coracao_3" type="AnimatedSprite" parent="."]
+position = Vector2( 100, 0 )
+scale = Vector2( 0.5, 0.5 )
+frames = SubResource( 1 )
+animation = "ativado"

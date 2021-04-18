@@ -3,9 +3,15 @@ extends Node
 var restart = false
 var quit_game = false
 var coletados = 0
+var coletados_bkp = 0
 var lose = false
 var fase = 0
 var endGame = false
+var botao_ativado = false
+var checkpoint = false
+var nascimento_x = 0
+var nascimento_y = 0
+var vidas = 3
 func _ready():
 	pass # Replace with function body.
 

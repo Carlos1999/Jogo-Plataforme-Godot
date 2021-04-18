@@ -3,5 +3,7 @@
 [ext_resource path="res://Fonts/Roboto/Roboto-BlackItalic.ttf" type="DynamicFontData" id=1]
 
 [resource]
-size = 47
+size = 36
+outline_size = 3
+use_mipmaps = true
 font_data = ExtResource( 1 )

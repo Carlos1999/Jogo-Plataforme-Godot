@@ -1,0 +1,31 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://platformer-pack-redux-360-assets/PNG/Enemies/slimeBlue.png" type="Texture" id=1]
+[ext_resource path="res://platformer-pack-redux-360-assets/PNG/Enemies/slimeBlue_move.png" type="Texture" id=2]
+[ext_resource path="res://Scripts/blue_slime.gd" type="Script" id=3]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 1 ), ExtResource( 2 ) ],
+"loop": true,
+"name": "move",
+"speed": 6.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 53.2999, 25.6831 )
+
+[node name="bee" type="Area2D"]
+script = ExtResource( 3 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 1, -9 )
+frames = SubResource( 1 )
+animation = "move"
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 5.76215, 17.9371 )
+shape = SubResource( 2 )
+[connection signal="body_entered" from="." to="." method="_on_bee_body_entered"]
+[connection signal="body_entered" from="." to="." method="_on_bernacle_body_entered"]

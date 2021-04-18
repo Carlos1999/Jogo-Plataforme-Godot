@@ -24,24 +24,9 @@ animations = [ {
 "name": "idle",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 11 ), ExtResource( 12 ) ],
+"frames": [ ExtResource( 3 ), ExtResource( 6 ) ],
 "loop": true,
-"name": "pink_walk",
-"speed": 8.0
-}, {
-"frames": [ ExtResource( 5 ) ],
-"loop": true,
-"name": "jump",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 10 ), ExtResource( 8 ) ],
-"loop": true,
-"name": "climb",
-"speed": 8.0
-}, {
-"frames": [ ExtResource( 9 ) ],
-"loop": true,
-"name": "hit",
+"name": "swim",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 4 ), ExtResource( 7 ) ],
@@ -49,9 +34,29 @@ animations = [ {
 "name": "walk",
 "speed": 8.0
 }, {
-"frames": [ ExtResource( 3 ), ExtResource( 6 ) ],
+"frames": [ ExtResource( 9 ) ],
 "loop": true,
-"name": "swim",
+"name": "hit",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 10 ), ExtResource( 8 ) ],
+"loop": true,
+"name": "climb",
+"speed": 8.0
+}, {
+"frames": [ ExtResource( 11 ), ExtResource( 12 ) ],
+"loop": true,
+"name": "pink_walk",
+"speed": 8.0
+}, {
+"frames": [ ExtResource( 9 ) ],
+"loop": true,
+"name": "jump_wall",
+"speed": 1.0
+}, {
+"frames": [ ExtResource( 5 ) ],
+"loop": true,
+"name": "jump",
 "speed": 5.0
 } ]
 
@@ -64,4 +69,5 @@ shape = SubResource( 1 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 2 )
-animation = "idle"
+animation = "jump_wall"
+playing = true
