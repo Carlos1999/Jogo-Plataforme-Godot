@@ -13,18 +13,36 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	if(Global.vidas == 5):
+		$coracao_1.play("ativado")	
+		$coracao_2.play("ativado")
+		$coracao_3.play("ativado")
+		$coracao_4.play("ativado")
+		$coracao_5.play("ativado")
+	if(Global.vidas == 4):
+		$coracao_1.play("ativado")	
+		$coracao_2.play("ativado")
+		$coracao_3.play("ativado")
+		$coracao_4.play("ativado")
+		$coracao_5.play("desativado")
 	if(Global.vidas == 3):
 		$coracao_1.play("ativado")	
 		$coracao_2.play("ativado")
 		$coracao_3.play("ativado")
+		$coracao_4.play("desativado")
+		$coracao_5.play("desativado")
 	if(Global.vidas == 2):
 		$coracao_1.play("ativado")	
 		$coracao_2.play("ativado")
 		$coracao_3.play("desativado")
+		$coracao_4.play("desativado")
+		$coracao_5.play("desativado")
 	if(Global.vidas == 1):
 		$coracao_1.play("ativado")	
 		$coracao_2.play("desativado")
 		$coracao_3.play("desativado")
+		$coracao_4.play("desativado")
+		$coracao_5.play("desativado")
 		
 	pass
 

@@ -12,6 +12,8 @@ var checkpoint = false
 var nascimento_x = 0
 var nascimento_y = 0
 var vidas = 3
+
+var nao_mover = false
 func _ready():
 	pass # Replace with function body.
 
