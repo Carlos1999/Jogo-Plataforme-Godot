@@ -15,6 +15,9 @@ func _on_Button_pressed():
 	if(Global.fase == 3):
 		Global.endGame = false
 		get_tree().change_scene("res://scenes/Fase3.tscn")
+	if(Global.fase == 4):
+		Global.endGame = false
+		get_tree().change_scene("res://scenes/Fase4.tscn")
 
 func _on_Button2_pressed():
 	get_tree().quit()

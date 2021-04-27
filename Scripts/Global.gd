@@ -13,6 +13,8 @@ var nascimento_x = 0
 var nascimento_y = 0
 var vidas = 3
 
+var position_player_x = 0
+var position_player_y = 0
 var nao_mover = false
 func _ready():
 	pass # Replace with function body.

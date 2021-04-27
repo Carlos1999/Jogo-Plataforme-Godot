@@ -14,6 +14,8 @@ func _ready():
 	pass # Replace with function body.
 
 func _physics_process(delta):
+	Global.position_player_x = position.x
+	Global.position_player_y = position.y
 	if(Global.nao_mover):
 		yield(get_tree().create_timer(1.0), "timeout")
 		Global.nao_mover = false
@@ -57,8 +59,15 @@ func _physics_process(delta):
 			velocity.y = -jump_force+300
 		
 		pulou_na_parede = true
+		
 	if(not pulou_na_parede):
-		if(Input.is_action_pressed("ui_left")):
+		if(Input.is_action_pressed("ui_down")):
+			
+			if(is_on_floor()):	
+				$AnimatedSprite.play("abaixar")	
+				$CollisionShape2D.scale.y = 0.5
+		elif(Input.is_action_pressed("ui_left")):
+			$CollisionShape2D.scale.y = 1
 			velocity.x = -speed
 			$AnimatedSprite.flip_h = true
 			if(is_on_floor()):		
@@ -66,6 +75,7 @@ func _physics_process(delta):
 			else:
 				$AnimatedSprite.play("jump")
 		elif(Input.is_action_pressed("ui_right")):
+			$CollisionShape2D.scale.y = 1
 			velocity.x = speed	
 			$AnimatedSprite.flip_h = false
 			if(is_on_floor()):		
@@ -73,6 +83,7 @@ func _physics_process(delta):
 			else:
 				$AnimatedSprite.play("jump")
 		else:
+			$CollisionShape2D.scale.y = 1
 			velocity.x = 0
 			if(is_on_floor()):
 				$AnimatedSprite.play("idle")

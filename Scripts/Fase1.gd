@@ -10,7 +10,7 @@ func _ready():
 	Global.nascimento_x = $Player.position.x 
 	Global.nascimento_y = $Player.position.y 
 		
-	#get_tree().change_scene("res://scenes/Fase2.tscn")
+	#get_tree().change_scene("res://scenes/Fase4.tscn")
 	pass # Replace with function body.
 
 func _process(delta):

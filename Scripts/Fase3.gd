@@ -27,7 +27,9 @@ func _ready():
 #	pass
 func _process(delta):
 	if(Global.endGame == true):
-		$Player/icones/fim.visible = true
+		Global.endGame = false
+		get_tree().change_scene("res://scenes/Fase4.tscn")
+	
 		return
 	if( Global.lose == true):
 		Global.nao_mover = true
