@@ -3,10 +3,16 @@
 # Nesse repositório, está o jogo de plataforma 2D feito utilizando o Godot. Utilizando tileset do [Kenney](https://www.kenney.nl/assets)
 
 
+
+![Image](Figuras/Projeto Terceira Unidade (DEBUG) 2022-02-04 13-53-00.gif)
+
+
+
+
 # :play_or_pause_button: Passo a Passo Para a Reprodução
 
 1. Clone o repositório;
-2. execute o arquivo JOGO SEM NOME EXECUTÁVEL.
+2. execute o arquivo JOGO EXECUTÁVEL.
 
 
 
