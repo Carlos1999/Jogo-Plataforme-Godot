@@ -4,7 +4,7 @@
 
 
 
-![Image](Figuras/Projeto Terceira Unidade (DEBUG) 2022-02-04 13-53-00.gif)
+![Image](https://github.com/Carlos1999/Jogo-Plataforme-Godot/blob/main/Figuras/Projeto%20Terceira%20Unidade%20(DEBUG)%202022-02-04%2013-53-00.gif)
 
 
 
