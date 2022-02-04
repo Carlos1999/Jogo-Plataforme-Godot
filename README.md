@@ -1,6 +1,6 @@
 # :mag_right: Introdução
 
-# Nesse repositório, está o jogo de plataforma 2D feito utilizando o Godot. Utilizando tileset do [Kenney](https://www.kenney.nl/assets)
+# Nesse repositório, está o jogo de plataforma 2D feito utilizando o Godot. 
 
 
 
@@ -24,6 +24,7 @@
 # :question: Sobre o Projeto
 
 Projeto criado para disciplinas do Programa de Estudos Secundários (PES) de Jogos Digitais do **Instituto Metrópole Digital - UFRN**, curso de Bacharelado em Tecnologia da Informação.
+Para esse projeto foi utilizado o tileset gratuito do [Kenney.](https://www.kenney.nl/assets)
 
 Para a realização de tal prática foram utilizadas as ferramentas:
 
